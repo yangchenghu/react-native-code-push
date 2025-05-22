@@ -325,8 +325,9 @@ public class CodePush implements ReactPackage {
 
                     // Mark that we tried to initialize the new update, so that if it crashes,
                     // we will know that we need to rollback when the app next starts.
-                    mSettingsManager.savePendingUpdate(pendingUpdate.getString(CodePushConstants.PENDING_UPDATE_HASH_KEY),
-                            /* isLoading */true);
+                    // 暂时注释掉，因为每次启动都会触发这个方法，导致每次启动都会rollback
+                    // mSettingsManager.savePendingUpdate(pendingUpdate.getString(CodePushConstants.PENDING_UPDATE_HASH_KEY),
+                            // /* isLoading */true);
                 }
             } catch (JSONException e) {
                 // Should not happen.
