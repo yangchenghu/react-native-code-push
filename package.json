@@ -28,11 +28,12 @@
     "test:fast:ios": "mocha --recursive bin/test --ios",
     "test:debugger:android": "mocha --recursive --inspect-brk=0.0.0.0 bin/test --android",
     "test:debugger:ios": "mocha --recursive --inspect-brk=0.0.0.0 bin/test --ios",
-    "tslint": "tslint -c tslint.json test/**/*.ts"
+    "tslint": "tslint -c tslint.json test/**/*.ts",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/react-native-code-push"
+    "url": "https://github.com/yangchenghu/react-native-code-push"
   },
   "dependencies": {
     "code-push": "4.2.3",
@@ -57,6 +58,7 @@
     "mkdirp": "latest",
     "mocha": "^9.2.0",
     "q": "^1.5.1",
+    "release-it": "^17.11.0",
     "run-sequence": "latest",
     "shx": "^0.3.4",
     "slash": "^3.0.0",
@@ -76,5 +78,8 @@
       "postlink": "node node_modules/react-native-code-push/scripts/postlink/run",
       "postunlink": "node node_modules/react-native-code-push/scripts/postunlink/run"
     }
+  },
+  "release-it": {
+    "$schema": "https://unpkg.com/release-it/schema/release-it.json"
   }
 }
